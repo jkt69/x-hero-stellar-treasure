@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Andi's Treasure Boxes</h1>
-    <div id="output"></div>
+    <div class="container">
+        <h1>Andi's Treasure Boxes</h1>
+        <div class="input-container">
+            <label for="biru">Number of Blue Boxes:</label>
+            <input type="number" id="biru" name="biru" min="0" value="0">
+        </div>
+        <div class="input-container">
+            <label for="ungu">Number of Purple Boxes:</label>
+            <input type="number" id="ungu" name="ungu" min="0" value="0">
+        </div>
+        <div class="input-container">
+            <label for="kuning">Number of Yellow Boxes:</label>
+            <input type="number" id="kuning" name="kuning" min="0" value="0">
+        </div>
+        <div class="input-container">
+            <label for="merah">Number of Red Boxes:</label>
+            <input type="number" id="merah" name="merah" min="0" value="0">
+        </div>
+        <button onclick="calculatePoints()">Calculate Points</button>
+        <div id="output"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
