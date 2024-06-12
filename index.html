@@ -10,14 +10,22 @@
     <div class="container">
         <h1>Epic Heroes - Stellar Treasure Calculator</h1>
         <div class="input-container">
-            <label for="biru">Blue Box:</label>
-            <input type="number" id="biru" value="0">
-            <label for="ungu">Purple Box:</label>
-            <input type="number" id="ungu" value="0">
-            <label for="kuning">Yellow Box:</label>
-            <input type="number" id="kuning" value="0">
-            <label for="merah">Red Box:</label>
-            <input type="number" id="merah" value="0">
+            <div class="input-row">
+                <label for="biru" class="blue-label">Blue Box:</label>
+                <input type="number" id="biru" value="0" class="blue-input">
+            </div>
+            <div class="input-row">
+                <label for="ungu" class="purple-label">Purple Box:</label>
+                <input type="number" id="ungu" value="0" class="purple-input">
+            </div>
+            <div class="input-row">
+                <label for="kuning" class="yellow-label">Yellow Box:</label>
+                <input type="number" id="kuning" value="0" class="yellow-input">
+            </div>
+            <div class="input-row">
+                <label for="merah" class="red-label">Red Box:</label>
+                <input type="number" id="merah" value="0" class="red-input">
+            </div>
             <button onclick="calculatePoints()">Calculate</button>
         </div>
         <div id="result" class="result-container"></div>
