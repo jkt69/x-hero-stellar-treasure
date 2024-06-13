@@ -60,32 +60,34 @@ function calculatePoints() {
     }
 
     let offset = 0;
-    if (openPoints >= 130) {
-        kotak.merah++;
-        kotak.kuning++;
-        kotak.ungu++;
-        kotak.biru++;
-        sisaPoints = openPoints - 130;
-        offset = 130;
-    } else if (openPoints >= 100) {
-        kotak.kuning++;
-        kotak.ungu++;
-        kotak.biru++;
-        sisaPoints = openPoints - 100;
-        offset = 100;
-    } else if (openPoints >= 70) {
-        kotak.ungu++;
-        kotak.biru++;
-        sisaPoints = openPoints - 70;
-        offset = 70;
-    } else if (openPoints >= 40) {
-        kotak.biru++;
-        sisaPoints = openPoints - 40;
-        offset = 40;
+    while(kotak.merah >=1 || kotak.kuning >=1 || kotak.ungu >= 1 || kotak.biru >= 1){
+        if (openPoints >= 130) {
+            kotak.merah++;
+            kotak.kuning++;
+            kotak.ungu++;
+            kotak.biru++;
+            sisaPoints = openPoints - 130;
+            offset = 130;
+        } else if (openPoints >= 100) {
+            kotak.kuning++;
+            kotak.ungu++;
+            kotak.biru++;
+            sisaPoints = openPoints - 100;
+            offset = 100;
+        } else if (openPoints >= 70) {
+            kotak.ungu++;
+            kotak.biru++;
+            sisaPoints = openPoints - 70;
+            offset = 70;
+        } else if (openPoints >= 40) {
+            kotak.biru++;
+            sisaPoints = openPoints - 40;
+            offset = 40;
+        }
+    
+        openPoints = openBox(kotak);
+        totalPoints += openPoints;
     }
-
-    openPoints = openBox(kotak);
-    totalPoints += openPoints;
     sisaPoints += openPoints;
 
     // Menampilkan hasil pada elemen HTML
