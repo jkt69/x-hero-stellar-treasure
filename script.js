@@ -60,8 +60,8 @@ function calculatePoints() {
     }
 
     let offset = 0;
-    let loop = 1;
-    while(loop == 1){
+    let looping = 1;
+    while(looping >= 1){
         if (openPoints >= 130) {
             kotak.merah++;
             kotak.kuning++;
@@ -85,7 +85,7 @@ function calculatePoints() {
             sisaPoints = openPoints - 40;
             offset = 40;
         } else {
-            loop = 0;
+            looping = 0;
         }
     
         openPoints = openBox(kotak);
